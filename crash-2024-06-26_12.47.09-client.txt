@@ -1,7 +1,7 @@
 ---- Minecraft Crash Report ----
-// I let you down. Sorry :(
+// Who set us up the TNT?
 
-Time: 2024-06-26 12:47:09
+Time: 2024-06-26 14:55:42
 Description: Initializing game
 
 java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'nahuy'!
@@ -16,18 +16,7 @@ java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to err
 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
 Caused by: java.lang.OutOfMemoryError: Java heap space
-	at java.base/java.util.LinkedHashMap.newNode(LinkedHashMap.java:257)
-	at java.base/java.util.HashMap.putVal(HashMap.java:629)
-	at java.base/java.util.HashMap.put(HashMap.java:610)
-	at com.google.common.collect.StandardTable$ColumnKeyIterator.computeNext(StandardTable.java:785)
-	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:146)
-	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:141)
-	at com.google.common.collect.Iterators.size(Iterators.java:169)
-	at com.google.common.collect.StandardTable$ColumnKeySet.size(StandardTable.java:702)
-	at java.base/java.util.AbstractCollection.toArray(AbstractCollection.java:141)
-	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:265)
-	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:238)
-	at com.google.common.collect.ArrayTable.<init>(ArrayTable.java:152)
+	at com.google.common.collect.ArrayTable.<init>(ArrayTable.java:166)
 	at com.google.common.collect.ArrayTable.<init>(ArrayTable.java:173)
 	at com.google.common.collect.ArrayTable.create(ArrayTable.java:139)
 	at net.minecraft.state.State.createWithTable(State.java:171)
@@ -35,19 +24,23 @@ Caused by: java.lang.OutOfMemoryError: Java heap space
 	at net.minecraft.state.StateManager$Builder.build(StateManager.java:157)
 	at net.minecraft.block.Block.<init>(Block.java:184)
 	at net.minecraft.block.LeavesBlock.<init>(LeavesBlock.java:34)
-	at net.kustik.nahuy.block.LeavesInfestedBlock.<init>(LeavesInfestedBlock.java:35)
-	at net.kustik.nahuy.block.LeavesInfestedBlock.<clinit>(LeavesInfestedBlock.java:86)
+	at net.kustik.nahuy.block.LeavesInfestedBlock.<init>(LeavesInfestedBlock.java:24)
+	at net.kustik.nahuy.block.LeavesInfestedBlock.<clinit>(LeavesInfestedBlock.java:61)
 	at net.kustik.nahuy.block.ExNihiloBlocksRegister.register(ExNihiloBlocksRegister.java:7)
-	at net.kustik.nahuy.Nahuy.onInitialize(Nahuy.java:22)
-	at net.fabricmc.loader.impl.game.minecraft.Hooks$$Lambda$3365/0x0000020ccc8c9ca0.accept(Unknown Source)
+	at net.kustik.nahuy.Nahuy.onInitialize(Nahuy.java:17)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks$$Lambda$3365/0x0000025901904000.accept(Unknown Source)
 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384)
 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:52)
 	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:468)
 	at net.minecraft.client.main.Main.main(Main.java:198)
-	at java.base/java.lang.invoke.LambdaForm$DMH/0x0000020ccc230000.invokeStaticInit(LambdaForm$DMH)
-	at java.base/java.lang.invoke.LambdaForm$MH/0x0000020ccc002800.invokeExact_MT(LambdaForm$MH)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x0000025901230000.invokeStaticInit(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x0000025901002400.invokeExact_MT(LambdaForm$MH)
 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x0000025901001c00.invokeStatic(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x0000025901002400.invokeExact_MT(LambdaForm$MH)
+	... 1 more
 
 
 A detailed walkthrough of the error, its code path and all known details is as follows:
@@ -94,7 +87,6 @@ Details:
 		VERSION.dll:Version Checking and File Installation Libraries:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
 		WINHTTP.dll:Службы HTTP Windows:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
 		WINMM.dll:MCI API DLL:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
-		WS2_32.dll:32-разрядная библиотека Windows Socket 2.0:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
 		WSOCK32.dll:Windows Socket 32-Bit DLL:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
 		Wldp.dll:Политика блокировки Windows:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
 		amsi.dll:Anti-Malware Scan Interface:10.0.19041.4355 (WinBuild.160101.0800):Microsoft Corporation
@@ -115,7 +107,7 @@ Details:
 		jemalloc.dll
 		jimage.dll:Java(TM) Platform SE binary:17.0.8.0:Oracle Corporation
 		jli.dll:Java(TM) Platform SE binary:17.0.8.0:Oracle Corporation
-		jna11917071462264730661.dll:JNA native library:6.1.4:Java(TM) Native Access (JNA)
+		jna8566592328537447951.dll:JNA native library:6.1.4:Java(TM) Native Access (JNA)
 		jsvml.dll:Java(TM) Platform SE binary:17.0.8.0:Oracle Corporation
 		jvm.dll:Java HotSpot(TM) 64-Bit server VM:17.0.8.0:Oracle Corporation
 		kernel.appcore.dll:AppModel API Host:10.0.19041.3758 (WinBuild.160101.0800):Microsoft Corporation
@@ -148,6 +140,7 @@ Details:
 		win32u.dll:Win32u:10.0.19041.4529 (WinBuild.160101.0800):Microsoft Corporation
 		windows.storage.dll:API хранения Microsoft WinRT:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
 		winrnr.dll:LDAP RnR Provider DLL:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
+		ws2_32.DLL:32-разрядная библиотека Windows Socket 2.0:10.0.19041.4406 (WinBuild.160101.0800):Microsoft Corporation
 		wshbth.dll:Windows Sockets Helper DLL:10.0.19041.3636 (WinBuild.160101.0800):Microsoft Corporation
 		zip.dll:Java(TM) Platform SE binary:17.0.8.0:Oracle Corporation
 Stacktrace:
@@ -164,7 +157,7 @@ Details:
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 17.0.8, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
-	Memory: 375982088 bytes (358 MiB) / 570425344 bytes (544 MiB) up to 2118123520 bytes (2020 MiB)
+	Memory: 395238144 bytes (376 MiB) / 573571072 bytes (547 MiB) up to 2118123520 bytes (2020 MiB)
 	CPUs: 4
 	Processor Vendor: GenuineIntel
 	Processor Name: Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
@@ -190,10 +183,10 @@ Details:
 	Memory slot #1 capacity (MB): 4096.00
 	Memory slot #1 clockSpeed (GHz): 1.60
 	Memory slot #1 type: DDR3
-	Virtual memory max (MB): 9353.02
-	Virtual memory used (MB): 5365.16
-	Swap memory total (MB): 1280.00
-	Swap memory used (MB): 52.98
+	Virtual memory max (MB): 9787.95
+	Virtual memory used (MB): 6982.40
+	Swap memory total (MB): 1714.93
+	Swap memory used (MB): 333.48
 	JVM Flags: 0 total; 
 	Fabric Mods: 
 		fabric-api: Fabric API 0.87.2+1.19.4
