@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "example3:block/bergamot_log",
+    "side": "example3:block/bergamot_log"
+  }
+}
