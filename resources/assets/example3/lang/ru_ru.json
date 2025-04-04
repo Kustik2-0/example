@@ -1,0 +1,21 @@
+{
+  "item.example3.tin_nugget": "Кусочек олова",
+  "item.example3.tin_ingot": "Слиток олова",
+  "item.example3.tiger_spawn_egg": "Яйцо призыва тигра",
+
+  "block.example3.deepslate_tin_ore": "Оловянноносный глубинный сланец",
+  "block.example3.raw_tin_block": "Блок рудного олова",
+  "block.example3.tin_block": "Оловянный блок",
+  "block.example3.tin_ore": "Оловянная руда",
+
+  "block.example3.bergamot_log": "Бревно бергамота",
+  "block.example3.bergamot_wood": "Бергамот",
+  "block.example3.stripped_bergamot_log": "Обтесанное бревно бергамота",
+  "block.example3.stripped_bergamot_wood": "Обтесанный бергамот",
+  "block.example3.bergamot_planks": "Бергамотовые доски",
+  "block.example3.bergamot_leaves": "Бергамотовые листья",
+  "block.example3.bergamot_sapling": "Бергамотовый саженец",
+
+
+  "itemgroup.example": "Вкладка для примера"
+}

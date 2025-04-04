@@ -1,0 +1,17 @@
+{
+  "type": "example3:home_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "example3:my_void",
+      "features": true,
+      "lakes": false,
+      "layers": [
+        {
+          "block": "minecraft:air",
+          "height": 1
+        }
+      ]
+    }
+  }
+}

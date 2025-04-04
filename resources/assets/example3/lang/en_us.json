@@ -1,0 +1,20 @@
+{
+  "item.example3.tin_nugget": "Tin Nagget",
+  "item.example3.tin_ingot": "Tin Ingot",
+  "item.example3.tiger_spawn_egg": "Tiger Spawn Egg",
+
+  "block.example3.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.example3.raw_tin_block": "Raw Tin Block",
+  "block.example3.tin_block": "Tin Block",
+  "block.example3.tin_ore": "Tin Ore",
+
+  "block.example3.bergamot_log": "Bergamot Log",
+  "block.example3.bergamot_wood": "Bergamot Wood",
+  "block.example3.stripped_bergamot_log": "Stripped Bergamot Log",
+  "block.example3.stripped_bergamot_wood": "Stripped Bergamot Wood",
+  "block.example3.bergamot_planks": "Bergamot Planks",
+  "block.example3.bergamot_leaves": "Bergamot Leaves",
+  "block.example3.bergamot_sapling": "Bergamot Sapling",
+
+  "itemgroup.example": "Example Item Group"
+}

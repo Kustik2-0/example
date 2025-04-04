@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "example3",
+  "version": "${version}",
+  "name": "example3",
+  "description": "",
+  "authors": [
+    "Kustik2.0"
+  ],
+  "contact": {
+    "repo": "https://github.com/Kustik2-0/example3"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/example3/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.kustik.example3.client.Example3Client"
+    ],
+    "main": [
+      "net.kustik.example3.Example3"
+    ],
+    "fabric-datagen": [
+      "net.kustik.example3.data.ExampleDataGenerator"
+    ]
+  },
+  "mixins": [
+    "example3.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "fabric": "*",
+    "minecraft": "1.19.4",
+    "geckolib": ">=4.1.1"
+  }
+}
